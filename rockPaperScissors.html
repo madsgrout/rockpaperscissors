@@ -65,14 +65,13 @@
         }
     } 
 
-    //console.log(playRound("Rock",computerPlay()));
-
     function game(){
       console.log("Welcome to 5 round Rock Paper Scissors!");
       var round = 1;
       var playerWins = 0;
       var computerWins = 0;
 
+      //Game loop
       while(round<6){
         let player = prompt("Choose your weapon:")
         var win = playRound(player, computerPlay());
@@ -89,6 +88,8 @@
         }
         round++;
       }
+
+      //Console log who won the game
       if(playerWins>computerWins){
         console.log("Congratulations you won over the computer " + playerWins + " " + computerWins);
       }
